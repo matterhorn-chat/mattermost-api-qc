@@ -9,7 +9,8 @@ import           Test.QuickCheck
 
 
 genText :: Gen T.Text
-genText = oneof [ return T.empty
+genText = sized $ \s ->
+          oneof [ return T.empty
                  , return $ T.singleton 'a'
                  , return $ T.singleton '1'
                  , return $ T.pack "b2"
@@ -18,7 +19,7 @@ genText = oneof [ return T.empty
                  , return $ T.singleton '\r'
                  , return $ T.singleton '\t'
                  , return $ T.pack " \n\r\t"
-                 , T.pack <$> arbitrary
+                 , T.pack <$> vectorOf s arbitrary
                  ]
 
 genMaybe :: Gen a -> Gen (Maybe a)
@@ -27,8 +28,9 @@ genMaybe g = frequency [ (1, return Nothing)
                        ]
 
 genSeq :: Gen a -> Gen (Seq.Seq a)
-genSeq g = frequency [ (1, return Seq.empty)
-                     , (9, Seq.fromList <$> listOf g)
+genSeq g = sized $ \s ->
+           frequency [ (1, return Seq.empty)
+                     , (9, Seq.fromList <$> vectorOf s g)
                      ]
 
 genTime :: Gen UTCTime
