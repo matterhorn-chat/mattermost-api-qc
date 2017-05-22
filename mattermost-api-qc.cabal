@@ -1,7 +1,6 @@
 name:                mattermost-api-qc
 version:             30802.1.0
 synopsis:            QuickCheck instances for the Mattermost client API library
--- description:         
 homepage:            https://github.com/matterhorn-chat/mattermost-api-qc
 license:             ISC
 license-file:        LICENSE
