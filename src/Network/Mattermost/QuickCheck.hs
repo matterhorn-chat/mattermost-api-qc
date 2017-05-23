@@ -73,8 +73,29 @@ attached = oneof [ return Nothing
                  , Just <$> (genSeq genPostPropAttachment)
                  ]
 
+genPostPropAttachmentField :: Gen PostPropAttachmentField
+genPostPropAttachmentField =
+  PostPropAttachmentField <$> genText
+                          <*> genText
+                          <*> oneof [ return True, return False ]
+
 genPostPropAttachment :: Gen PostPropAttachment
-genPostPropAttachment = PostPropAttachment <$> genText <*> genText
+genPostPropAttachment = PostPropAttachment
+                        <$> arbitrary
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genSeq genPostPropAttachmentField
+                        <*> genText
+                        <*> genText
+                        <*> genText
+                        <*> genText
 
 genPost :: Gen Post
 genPost = Post
