@@ -50,18 +50,13 @@ genFileId = FI . Id <$> genText
 genUserId :: Gen UserId
 genUserId = UI . Id <$> genText
 
-genPostType :: Gen PostType
-genPostType = oneof [ return PostTypeJoinChannel
-                    , return PostTypeLeaveChannel
-                    , return PostTypeAddToChannel
-                    , return PostTypeRemoveFromChannel
-                    , return PostTypeHeaderChange
-                    , return PostTypeDisplayNameChange
-                    , return PostTypePurposeChange
-                    , return PostTypeChannelDeleted
-                    , return PostTypeEphemeral
-                    , PostTypeUnknown <$> genText
-                    ]
+genType :: Gen Type
+genType = oneof [ return Ordinary
+                , return Direct
+                , return Private
+                , return Group
+                , Unknown <$> genText
+                ]
 
 genPostProps :: Gen PostProps
 genPostProps = PostProps
@@ -100,6 +95,19 @@ genPostPropAttachment = PostPropAttachment
                         <*> genText
                         <*> genText
                         <*> genText
+
+genPostType :: Gen PostType
+genPostType = oneof [ return PostTypeJoinChannel
+                    , return PostTypeLeaveChannel
+                    , return PostTypeAddToChannel
+                    , return PostTypeRemoveFromChannel
+                    , return PostTypeHeaderChange
+                    , return PostTypeDisplayNameChange
+                    , return PostTypePurposeChange
+                    , return PostTypeChannelDeleted
+                    , return PostTypeEphemeral
+                    , PostTypeUnknown <$> genText
+                    ]
 
 genPost :: Gen Post
 genPost = Post
