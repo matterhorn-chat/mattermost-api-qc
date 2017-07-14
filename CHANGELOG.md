@@ -18,7 +18,7 @@
 =========
 
 * Updated for mattermost-api version 30802.0.0
-	
+
 30701.1.0
 =========
 
