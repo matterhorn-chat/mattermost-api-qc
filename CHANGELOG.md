@@ -1,4 +1,12 @@
 
+31000.0.0
+=========
+
+ * Updated for mattermost-api version 31000.0.0
+ * Updated genPostType to genType to match upstream type change
+ * Updated postPropAttachment generator
+ * Remove -Werror for Hackage uploads
+
 30802.1.0
 =========
 
