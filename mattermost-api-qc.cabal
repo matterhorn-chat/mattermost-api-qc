@@ -9,7 +9,7 @@ maintainer:          kquick@galois.com
 copyright:           2017 Kevin Quick
 category:            Testing
 build-type:          Simple
-extra-source-files:  ChangeLog.md
+extra-source-files:  CHANGELOG.md
 cabal-version:       >=1.10
 tested-with:         GHC == 8.0.2
 
