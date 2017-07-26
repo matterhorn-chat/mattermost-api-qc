@@ -1,4 +1,10 @@
 
+40000.0.0
+=========
+
+ * Version bump only to match mattermost-api and matterhorn package
+   versions.
+
 31000.0.0
 =========
 
