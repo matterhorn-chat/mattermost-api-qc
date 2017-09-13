@@ -1,4 +1,9 @@
 
+40000.1.0
+=========
+
+ * Updated for mattermost-api version 40000.1.0.
+
 40000.0.1
 =========
 
