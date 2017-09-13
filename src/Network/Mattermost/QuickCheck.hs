@@ -114,7 +114,7 @@ genPost = Post
           <$> genMaybe genPostId
           <*> genMaybe genPostId
           <*> genPostProps
-          <*> genText
+          <*> genMaybe genPostId
           <*> genSeq genFileId
           <*> genPostId
           <*> genPostType
