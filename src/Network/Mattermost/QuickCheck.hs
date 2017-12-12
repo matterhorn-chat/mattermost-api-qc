@@ -5,6 +5,7 @@ import qualified Data.Text as T
 import           Data.Time.Calendar (Day(..))
 import           Data.Time.Clock (UTCTime(..), secondsToDiffTime)
 import           Network.Mattermost.Types
+-- import           Network.Mattermost.Types.Base (ServerTime(..))
 import           Test.QuickCheck
 
 
@@ -33,10 +34,11 @@ genSeq g = sized $ \s ->
                      , (9, Seq.fromList <$> vectorOf s g)
                      ]
 
-genTime :: Gen UTCTime
-genTime = UTCTime
+genTime :: Gen ServerTime
+genTime = ServerTime <$>
+          (UTCTime
            <$> (ModifiedJulianDay <$> (2000 +) <$> arbitrary)
-           <*> (secondsToDiffTime <$> choose (0, 86400))
+           <*> (secondsToDiffTime <$> choose (0, 86400)))
 
 genPostId :: Gen PostId
 genPostId = PI . Id <$> genText
