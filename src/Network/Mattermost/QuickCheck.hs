@@ -5,7 +5,6 @@ import qualified Data.Text as T
 import           Data.Time.Calendar (Day(..))
 import           Data.Time.Clock (UTCTime(..), secondsToDiffTime)
 import           Network.Mattermost.Types
--- import           Network.Mattermost.Types.Base (ServerTime(..))
 import           Test.QuickCheck
 
 
