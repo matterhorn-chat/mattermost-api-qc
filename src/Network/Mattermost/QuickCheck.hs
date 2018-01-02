@@ -123,6 +123,7 @@ genPost = Post
           <*> genMaybe genTime
           <*> genText
           <*> genTime
+          <*> genTime
           <*> genMaybe genUserId
           <*> genTime
           <*> genMaybe genPostId
