@@ -8,6 +8,9 @@ import           Network.Mattermost.Types
 import           Test.QuickCheck
 
 
+genUserText :: Gen UserText
+genUserText = UserText <$> genText
+
 genText :: Gen T.Text
 genText = sized $ \s ->
           oneof [ return T.empty
@@ -119,7 +122,7 @@ genPost = Post
           <*> genSeq genFileId
           <*> genPostId
           <*> genPostType
-          <*> genText
+          <*> genUserText
           <*> genMaybe genTime
           <*> genText
           <*> genTime
