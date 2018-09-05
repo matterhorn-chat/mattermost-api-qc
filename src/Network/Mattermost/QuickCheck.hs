@@ -129,6 +129,5 @@ genPost = Post
           <*> genTime
           <*> genMaybe genUserId
           <*> genTime
-          <*> genMaybe genPostId
           <*> genChannelId
           <*> arbitrary
