@@ -1,3 +1,8 @@
+Any versions not explicitly discussed below are simple version-only
+updates with no change for compatibility with the corresponding
+mattermost-api of the same version.
+
+
 50200.0.1
 =========
 
