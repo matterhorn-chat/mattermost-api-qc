@@ -1,3 +1,8 @@
+50200.1.1
+=========
+
+ * Updated for mattermost-api version 50200.1.1.
+
 50200.0.1
 =========
 
