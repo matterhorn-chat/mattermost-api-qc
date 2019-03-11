@@ -1,5 +1,5 @@
 name:                mattermost-api-qc
-version:             50200.1.1
+version:             50200.1.2
 description:         A testing library for the mattermost-api library
 synopsis:            QuickCheck instances for the Mattermost client API library
 homepage:            https://github.com/matterhorn-chat/mattermost-api-qc
@@ -22,7 +22,7 @@ library
   exposed-modules:     Network.Mattermost.QuickCheck
   build-depends:       base >=4.4 && <5
                      , containers
-                     , mattermost-api == 50200.1.1
+                     , mattermost-api == 50200.1.2
                      , QuickCheck
                      , text
                      , time
