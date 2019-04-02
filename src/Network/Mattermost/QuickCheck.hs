@@ -66,6 +66,7 @@ genPostProps :: Gen PostProps
 genPostProps = PostProps
                <$> genMaybe genText
                <*> genMaybe genText
+               <*> genMaybe arbitrary
                <*> attached
                <*> genMaybe genText
                <*> genMaybe genText
