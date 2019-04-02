@@ -1,3 +1,19 @@
+
+Any versions not explicitly discussed below are simple version-only
+updates with no change for compatibility with the corresponding
+mattermost-api of the same version.
+
+
+50200.1.2
+=========
+
+ * Updated for mattermost-api version 50200.1.2.
+
+50200.1.1
+=========
+
+ * Updated for mattermost-api version 50200.1.1.
+
 50200.0.1
 =========
 
