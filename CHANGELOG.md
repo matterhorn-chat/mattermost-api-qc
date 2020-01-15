@@ -8,6 +8,11 @@ mattermost-api of the same version.
 
  * Updated for mattermost-api version 50200.2.0.
 
+50200.3.0
+=========
+
+ * Updated for mattermost-api version 50200.3.0.
+
 50200.1.4
 =========
 
