@@ -132,3 +132,4 @@ genPost = Post
           <*> genTime
           <*> genChannelId
           <*> arbitrary
+          <*> genMaybe arbitrary
