@@ -114,6 +114,10 @@ genPostType = oneof [ return PostTypeJoinChannel
                     , PostTypeUnknown <$> genText
                     ]
 
+genMetadata :: Gen PostMetadata
+genMetadata =
+    return $ PostMetadata mempty mempty
+
 genPost :: Gen Post
 genPost = Post
           <$> genMaybe genPostId
@@ -133,3 +137,4 @@ genPost = Post
           <*> genChannelId
           <*> arbitrary
           <*> genMaybe arbitrary
+          <*> genMetadata
