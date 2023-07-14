@@ -27,7 +27,7 @@ library
   exposed-modules:     Network.Mattermost.QuickCheck
   build-depends:       base >=4.4 && <5
                      , containers
-                     , mattermost-api == 50200.14.0
+                     , mattermost-api == 50200.15.0
                      , QuickCheck
                      , text
                      , time
